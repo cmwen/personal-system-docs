@@ -1,0 +1,20 @@
+/* Native Starlight controls retain their keyboard and responsive behavior. */
+:root {
+  --sl-color-accent-low: #112f2e;
+  --sl-color-accent: #45cdb4;
+  --sl-color-accent-high: #b7f5e6;
+  --sl-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --sl-content-width: 56rem;
+}
+:root[data-theme='light'] {
+  --sl-color-accent-low: #d9f6ed;
+  --sl-color-accent: #087c66;
+  --sl-color-accent-high: #064a40;
+}
+.hero h1 { letter-spacing: -0.045em; }
+.hero .tagline { max-width: 38rem; }
+.card { border-radius: 0.85rem; }
+.sl-markdown-content :is(h2, h3) { letter-spacing: -0.02em; }
+.sl-markdown-content table { font-size: 0.9rem; }
+.sl-markdown-content td { vertical-align: top; }
+.sl-markdown-content th { background: var(--sl-color-gray-6); }
