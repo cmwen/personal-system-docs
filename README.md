@@ -1,6 +1,6 @@
 # Personal System Graph documentation
 
-[Live documentation](https://cmwen.github.io/personal-system-docs/)
+[Live documentation](https://cmwen.dev/personal-system-docs/)
 
 A self-contained Astro 7 + Starlight documentation repository for the PRD,
 architecture decisions, requirements, research, and outputs.
@@ -44,7 +44,7 @@ verifies internal links, uploads `dist/`, and deploys to the `github-pages`
 environment. Actions are pinned to commit SHAs. No extra secret is required.
 
 Pages must use GitHub Actions as its build source. The public site is
-https://cmwen.github.io/personal-system-docs/.
+https://cmwen.dev/personal-system-docs/.
 
 [Scope](docs/scope.md) · [Decisions](docs/adr/002-astro-documentation-site.md) ·
 [Requirements](docs/requirements/index.md) · [Outputs](docs/outputs/index.md)

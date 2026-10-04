@@ -16,7 +16,8 @@ Publish the independent documentation repository as
 Store canonical Markdown in its `docs/` directory beside the site code and lockfile.
 The original PRD and ADR-001 remain verbatim.
 
-Publish publicly at https://cmwen.github.io/personal-system-docs/.
+Publish publicly at https://cmwen.dev/personal-system-docs/.
+The project inherits the account's `cmwen.dev` domain. Enable HTTPS enforcement.
 Use `site.config.mjs` for the domain/base path and apply that base consistently to
 content links, landing-page actions, assets, and built-page link validation.
 

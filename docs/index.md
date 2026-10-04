@@ -26,5 +26,5 @@ product deployment has been delivered. The Astro/Starlight documentation site is
 built; see [OUT-002](outputs/OUT-002-astro-documentation-site.md).
 
 Canonical documents now live in this repository's `docs/` directory. GitHub Actions
-builds and publishes the site to [GitHub Pages](https://cmwen.github.io/personal-system-docs/).
+builds and publishes the site to [GitHub Pages](https://cmwen.dev/personal-system-docs/).
 See [the publishing record](outputs/OUT-003-github-pages.md).

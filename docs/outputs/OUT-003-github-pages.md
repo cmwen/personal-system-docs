@@ -1,12 +1,12 @@
 # OUT-003: Standalone documentation repository and GitHub Pages
 
 **Date:** 2026-10-04  
-**Status:** Publishing configured
+**Status:** Live
 
 ## Artifact
 
 - Repository: https://github.com/cmwen/personal-system-docs
-- Site: https://cmwen.github.io/personal-system-docs/
+- Site: https://cmwen.dev/personal-system-docs/
 - Deployment logs: https://github.com/cmwen/personal-system-docs/actions
 - Decision: [ADR-003](../adr/003-standalone-repository-and-pages.md)
 
@@ -30,3 +30,10 @@ for checking the workflow result.
 Discuss the product implementation: persistence/authority model, manual graph
 editing, graph lenses, identity resolution, and discovery adapters. No product
 code is introduced by this documentation move.
+
+## Publication evidence
+
+The [first Pages deployment](https://github.com/cmwen/personal-system-docs/actions/runs/37171964126)
+completed successfully, including a clean npm install, Astro checks, build/link
+checks, and deployment. The project inherits the account's `cmwen.dev` domain;
+HTTPS enforcement is enabled. Canonical metadata uses that domain.
