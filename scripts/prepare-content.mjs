@@ -1,14 +1,8 @@
+import { base } from '../site.config.mjs';
 import { existsSync, readdirSync, readFileSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 function findSource() {
-  if (process.env.DOCS_SOURCE) return path.resolve(process.env.DOCS_SOURCE);
-  let dir = process.cwd();
-  while (true) {
-    if (existsSync(path.join(dir, '.workspace/workspace.yaml'))) return path.join(dir, 'docs');
-    const parent = path.dirname(dir);
-    if (parent === dir) throw new Error('Workspace docs not found. Set DOCS_SOURCE to the canonical Markdown directory.');
-    dir = parent;
-  }
+  return path.resolve(process.env.DOCS_SOURCE || 'docs');
 }
 const source = findSource();
 if (!existsSync(source)) throw new Error(`Documentation source does not exist: ${source}`);
@@ -21,7 +15,7 @@ function walk(dir) {
 const files = walk(source);
 const routes = new Map(files.map(file => {
   const slug = path.relative(source, file).split(path.sep).join('/').replace(/\.md$/, '').replace(/(^|\/)index$/, '').toLowerCase();
-  return [file, '/' + (slug ? slug + '/' : '')];
+  return [file, base + '/' + (slug ? slug + '/' : '')];
 }));
 const output = path.resolve('src/content/docs');
 rmSync(output, { recursive: true, force: true });
@@ -62,10 +56,10 @@ hero:
   tagline: The product record for a local-first view of your software ecosystem — from intended architecture to observed evidence.
   actions:
     - text: Explore the scope
-      link: /scope/
+      link: ${base}/scope/
       icon: right-arrow
     - text: Read the requirements
-      link: /requirements/
+      link: ${base}/requirements/
       variant: secondary
 ---
 import { CardGrid, LinkCard } from '@astrojs/starlight/components';
@@ -73,22 +67,22 @@ import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 ## The working record
 
 <CardGrid>
-  <LinkCard title="Product requirements" description="The draft PRD and 17 traceable requirements define V0 and its validation." href="/prd/personal-system-graph/" />
-  <LinkCard title="Architecture decisions" description="ADR-001: user intent is authoritative; discovery supplies evidence." href="/adr/001-user-curated-graph/" />
-  <LinkCard title="Research" description="Open questions, evidence, options, and recommendations before decisions." href="/research/" />
-  <LinkCard title="Outputs" description="Delivered artifacts, validation evidence, and remaining work." href="/outputs/" />
+  <LinkCard title="Product requirements" description="The draft PRD and 17 traceable requirements define V0 and its validation." href="${base}/prd/personal-system-graph/" />
+  <LinkCard title="Architecture decisions" description="ADR-001: user intent is authoritative; discovery supplies evidence." href="${base}/adr/001-user-curated-graph/" />
+  <LinkCard title="Research" description="Open questions, evidence, options, and recommendations before decisions." href="${base}/research/" />
+  <LinkCard title="Outputs" description="Delivered artifacts, validation evidence, and remaining work." href="${base}/outputs/" />
 </CardGrid>
 
 ## The V0 boundary
 
 One owner. Five entity kinds. A graph you curate, with GitHub, filesystem, and LocalLink observations attached as evidence. Manual relationships and layout survive rescans. SQLite stores the local graph; AI remains advisory.
 
-[Read the full scope →](/scope/)
+[Read the full scope →](${base}/scope/)
 
 ## Current status
 
 The PRD is **Draft**. ADR-001 is **Accepted for V0**. Product requirements are captured; product implementation is not verified. This documentation site is the first delivery milestone.
 
-[Documentation site](/documentation-site/) · [Source provenance](/sources/) · [Requirements register](/requirements/)
+[Documentation site](${base}/documentation-site/) · [Source provenance](${base}/sources/) · [Requirements register](${base}/requirements/)
 `);
 console.log(`Prepared ${files.length} documentation pages from ${source}`);

@@ -1,19 +1,20 @@
 # Personal System Graph documentation
 
-Astro 7 + Starlight, TypeScript, static HTML, and Pagefind full-text search.
-The workspace `docs/` directory is the canonical source. Generated site content
-is ignored by Git; the source PRD and ADR remain untouched.
+[Live documentation](https://cmwen.github.io/personal-system-docs/)
 
-## Run locally
+A self-contained Astro 7 + Starlight documentation repository for the PRD,
+architecture decisions, requirements, research, and outputs.
 
-Requires Node.js 22.12+ (Node 24 recommended).
+## Local development
+
+Node.js 22.12+ is required; CI uses Node 24.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open the localhost URL printed by Astro. For production search and output:
+Open the URL printed by Astro under `/personal-system-docs/`.
 
 ```sh
 npm run check
@@ -21,22 +22,29 @@ npm run build
 npm run preview
 ```
 
-Search indexes are created by the production build. The preview serves `dist/`.
-Build includes a check of every generated internal page link and anchor.
+Search is indexed during the production build and works in preview/production.
 
-## Content
+## Edit documentation
 
-Edit Markdown in the workspace root `docs/`, then restart `npm run dev` or rerun
-`npm run build`. The preparation step recursively imports new records, derives
-titles, rewrites internal links, and rejects unresolved document links.
-Research, decisions, and outputs automatically appear in their sidebar groups.
-The site adds a landing page linking all registers.
+Edit canonical Markdown in `docs/`. Restart dev or rebuild to refresh generated
+site content. Research, ADR, and output files automatically enter navigation.
+`src/content/docs/` is generated and ignored; do not edit it.
+The source PRD and ADR-001 are preserved verbatim.
 
-Inside this workspace, source discovery is automatic from canonical checkouts
-and isolated worktrees. For a standalone checkout, point `DOCS_SOURCE` at the
-canonical docs folder, for example `DOCS_SOURCE=/path/to/docs npm run build`.
-The build fails clearly if sources are unavailable.
+The default build uses only files in this repository. An optional `DOCS_SOURCE`
+override may point to an alternate Markdown directory.
+`site.config.mjs` defines the domain and base path for navigation/assets/search.
 
-No remote services, analytics, web fonts, or hosting are required. Deployment is
-not configured yet. Personal source paths are included in the source provenance
-page; select access/visibility before publishing.
+## GitHub Pages
+
+Pushes to `main` and manual workflow dispatch build and deploy the site.
+Pull requests run the same checks/build without deploying.
+The workflow installs the lockfile with `npm ci`, checks Astro, builds the site,
+verifies internal links, uploads `dist/`, and deploys to the `github-pages`
+environment. Actions are pinned to commit SHAs. No extra secret is required.
+
+Pages must use GitHub Actions as its build source. The public site is
+https://cmwen.github.io/personal-system-docs/.
+
+[Scope](docs/scope.md) · [Decisions](docs/adr/002-astro-documentation-site.md) ·
+[Requirements](docs/requirements/index.md) · [Outputs](docs/outputs/index.md)

@@ -1,3 +1,4 @@
+import { base } from '../site.config.mjs';
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 const root = path.resolve('dist');
@@ -12,12 +13,14 @@ const errors = [];
 let checked = 0;
 for (const page of pages) {
   const html = readFileSync(page, 'utf8');
-  const route = '/' + path.relative(root, page).split(path.sep).join('/').replace(/index\.html$/, '');
+  const route = base + '/' + path.relative(root, page).split(path.sep).join('/').replace(/index\.html$/, '');
   for (const match of html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)) {
     const href = match[1].replaceAll('&amp;', '&');
     if (/^(?:[a-z][\w+.-]*:|\/\/)/i.test(href)) continue;
     const url = new URL(href, `https://docs.local${route}`);
-    let target = path.join(root, decodeURIComponent(url.pathname));
+    const pathname = decodeURIComponent(url.pathname);
+    if (!pathname.startsWith(base + '/')) { errors.push(`${route} -> ${href}: missing site base`); continue; }
+    let target = path.join(root, pathname.slice(base.length));
     if (!path.extname(target)) target = path.join(target, 'index.html');
     if (!existsSync(target)) { errors.push(`${route} -> ${href}: missing file`); continue; }
     if (url.hash && target.endsWith('.html')) {

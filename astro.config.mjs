@@ -1,11 +1,14 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { site, base } from './site.config.mjs';
 
 export default defineConfig({
+  site,
+  base,
   integrations: [starlight({
     title: 'Personal System Graph',
     description: 'The product record: scope, requirements, decisions, research, and delivery.',
-    favicon: '/favicon.svg',
+    favicon: `${base}/favicon.svg`,
     customCss: ['./src/styles/custom.css'],
     sidebar: [
       { label: 'Overview', items: [
