@@ -10,6 +10,12 @@ a user-curated graph supported by discovered evidence.
 - [ADR-001 — Accepted for V0](adr/001-user-curated-graph.md)
 - [Requirements and acceptance checks](requirements/index.md)
 
+## Product ideas
+
+- [Idea register](ideas/index.md)
+- [OAuth clients and graph-edge context](ideas/IDEA-001-oauth-clients.md)
+- [KeePass and standalone data-layer nodes](ideas/IDEA-002-keepass-data-layer.md)
+
 ## Implementation design
 
 - [Plan and decision summary](planning/index.md)
@@ -30,8 +36,8 @@ a user-curated graph supported by discovered evidence.
 
 The two source records have been preserved verbatim. The requirements register
 derives implementation checks from them; it does not imply implementation is
-complete. Product research has not yet been performed, and no product code or
-product deployment has been delivered. The Astro/Starlight documentation site is
+complete. Initial technical desk research and product ideas are recorded; no
+product code or product deployment has been delivered. The Astro/Starlight documentation site is
 built; see [OUT-002](outputs/OUT-002-astro-documentation-site.md).
 
 Canonical documents now live in this repository's `docs/` directory. GitHub Actions

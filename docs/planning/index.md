@@ -65,3 +65,13 @@ remote scan job delivery; LocalLink API/mapping; freshness thresholds; mobile
 projection/layout behavior and graph library viability. Resolve these with small
 spikes or focused ADRs when needed. Server/framework/library choices above remain
 proposals until accepted; exact versions are pinned during M0.
+
+## Idea capture before implementation
+
+The owner is adding ideas before product coding. Track
+[OAuth clients on edges](../ideas/IDEA-001-oauth-clients.md) and
+[KeePass as a standalone data-layer node](../ideas/IDEA-002-keepass-data-layer.md)
+in [the living idea register](../ideas/index.md). Resolve their identity,
+representation, and release priority before modifying the five-kind contract.
+The immediate work is documentation; the milestone plan is not an instruction
+to start implementing these extensions.

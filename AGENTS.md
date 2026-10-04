@@ -20,3 +20,7 @@ Status is meaningful: owner-confirmed topology is accepted; proposed frameworks
 and future product command wrappers must not be presented as implemented.
 Preserve the imported PRD/ADR-001 snapshots. Later scope decisions live in linked
 ADRs and requirement supplements. No product implementation exists in this repo.
+
+New owner ideas are captured in `docs/ideas/` with stable IDEA IDs. Preserve
+owner intent while separating illustrative schemas from accepted decisions.
+Do not silently add entity kinds or promote ideas into V0 requirements.

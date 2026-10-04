@@ -23,6 +23,7 @@ export default defineConfig({
         { label: 'Requirements register', slug: 'requirements' },
       ] },
       { label: 'Architecture decisions', items: [{ autogenerate: { directory: 'adr' } }] },
+      { label: 'Product ideas', items: [{ autogenerate: { directory: 'ideas' } }] },
       { label: 'Technical design', items: [{ autogenerate: { directory: 'design' } }] },
       { label: 'Research', items: [{ autogenerate: { directory: 'research' } }] },
       { label: 'Outputs', items: [{ autogenerate: { directory: 'outputs' } }] },

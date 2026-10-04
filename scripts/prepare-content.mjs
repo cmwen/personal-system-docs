@@ -83,6 +83,6 @@ One owner. Five entity kinds. A graph you curate, with GitHub, filesystem, and L
 
 The PRD is **Draft**. ADR-001 is **Accepted for V0**. Product requirements are captured; product implementation is not verified. This documentation site is the first delivery milestone.
 
-[Implementation plan](${base}/planning/) · [Technical design](${base}/design/technical-design/) · [Documentation site](${base}/documentation-site/) · [Source provenance](${base}/sources/) · [Requirements register](${base}/requirements/)
+[Product ideas](${base}/ideas/) · [Implementation plan](${base}/planning/) · [Technical design](${base}/design/technical-design/) · [Documentation site](${base}/documentation-site/) · [Source provenance](${base}/sources/) · [Requirements register](${base}/requirements/)
 `);
 console.log(`Prepared ${files.length} documentation pages from ${source}`);

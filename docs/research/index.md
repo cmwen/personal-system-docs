@@ -13,6 +13,8 @@ implementation details.
 | RES-005 | What provider contract and LocalLink identity mapping preserve authority and freshness? | REQ-006, REQ-007, REQ-011 | Open |
 | RES-006 | What documentation framework and access model fit the site brief? | Documentation site brief | Resolved in ADR-002/003 |
 | RES-007 | [Mixed stack and implementation boundaries](RES-007-implementation-stack.md) | REQ-001, 005, 008–015, 018, 019 | Desk research complete; prototypes remain |
+| RES-008 | How should OAuth clients be identified and shown on relationships: annotation, reusable record, or entity? | IDEA-001 | Open; no implementation research yet |
+| RES-009 | Does KeePass inventory represent an app, vault, or logical system, and how should standalone data-layer nodes appear? | IDEA-002 | Open; owner need captured |
 
 ## Research record template
 

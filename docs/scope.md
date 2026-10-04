@@ -69,6 +69,15 @@ filesystem steps. The source sets no numeric performance threshold.
 
 This ordering is a proposal, not an expansion of V0 or a commitment to a stack.
 
+## Newly tracked product ideas
+
+The owner requested [OAuth client inventory on graph edges](ideas/IDEA-001-oauth-clients.md)
+and [KeePass as a standalone data-layer node](ideas/IDEA-002-keepass-data-layer.md).
+These needs are captured in [the idea register](ideas/index.md); representation
+and release assignment remain open. A manual System with facets and zero edges
+fits the current baseline; OAuth inventory and specialized entity kinds require
+a follow-up model decision. The original source PRD/ADR-001 remain unchanged.
+
 ## Still open
 
 Desktop platform target and GPUI graph implementation; server/PWA framework acceptance;

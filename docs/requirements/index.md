@@ -52,3 +52,15 @@ The [scope exclusions](../scope.md) apply to all requirements. Documentation sit
 checks live in the [proposed site brief](../documentation-site.md) because they
 describe the delivery process, not product V0 features. Link future research,
 ADRs, and implementation outputs to these stable requirement IDs.
+
+## Captured extension candidates
+
+Owner ideas are tracked separately from the 19 current baseline requirements:
+
+| Idea | Candidate behavior | Decision state |
+| --- | --- | --- |
+| [IDEA-001](../ideas/IDEA-001-oauth-clients.md) | Track OAuth clients and reference them from graph edges; inspect reuse/authentication context | Representation, acceptance, and release assignment open |
+| [IDEA-002](../ideas/IDEA-002-keepass-data-layer.md) | Track KeePass as a data-layer resource, including a standalone node with zero dependencies | Precise subject/facets and release assignment open; manual node support fits baseline |
+
+Promote candidates to requirement IDs and an ADR only after their scope/model is
+decided. Current authority, manual-layout, and freshness rules still apply.

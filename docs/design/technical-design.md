@@ -171,3 +171,13 @@ Recommendations are design judgments, informed by
 [SQLite WAL](https://sqlite.org/wal.html),
 [PWA installation](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable),
 and [Tailscale HTTPS](https://tailscale.com/docs/how-to/set-up-https-certificates).
+
+## Model questions captured after this design
+
+[OAuth client edge references](../ideas/IDEA-001-oauth-clients.md) could introduce
+a reusable inventory record or relationship metadata; this is not a decided
+schema/table yet. [KeePass](../ideas/IDEA-002-keepass-data-layer.md) demonstrates
+that a data-layer resource with no dependencies can be useful. Preserve support
+for manually authored standalone nodes; a specialized resource kind, parser,
+or secrets integration is not implied. Do not assume graph inventory consists
+only of discovered repositories and runtimes.
