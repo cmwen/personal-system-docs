@@ -14,6 +14,7 @@ export default defineConfig({
       { label: 'Overview', items: [
         { label: 'Documentation home', slug: '' },
         { label: 'Product scope', slug: 'scope' },
+        { label: 'Implementation plan', slug: 'planning' },
         { label: 'Documentation site', slug: 'documentation-site' },
         { label: 'Source provenance', slug: 'sources' },
       ] },
@@ -22,6 +23,7 @@ export default defineConfig({
         { label: 'Requirements register', slug: 'requirements' },
       ] },
       { label: 'Architecture decisions', items: [{ autogenerate: { directory: 'adr' } }] },
+      { label: 'Technical design', items: [{ autogenerate: { directory: 'design' } }] },
       { label: 'Research', items: [{ autogenerate: { directory: 'research' } }] },
       { label: 'Outputs', items: [{ autogenerate: { directory: 'outputs' } }] },
     ],

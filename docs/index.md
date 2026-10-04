@@ -10,6 +10,15 @@ a user-curated graph supported by discovered evidence.
 - [ADR-001 — Accepted for V0](adr/001-user-curated-graph.md)
 - [Requirements and acceptance checks](requirements/index.md)
 
+## Implementation design
+
+- [Plan and decision summary](planning/index.md)
+- [Technical design](design/technical-design.md)
+- [AI-friendly repository design](design/ai-friendly-repository.md)
+- [ADR-004 — confirmed home server and clients](adr/004-home-server-and-clients.md)
+- [ADR-005 — proposed mixed stack and contracts](adr/005-mixed-stack-and-contracts.md)
+- [ADR-006 — proposed agent-friendly product repository](adr/006-ai-friendly-product-repository.md)
+
 ## Working records
 
 - [Documentation site](documentation-site.md)

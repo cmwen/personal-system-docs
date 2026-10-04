@@ -7,6 +7,7 @@
 | OUT-002 | [Astro documentation site](OUT-002-astro-documentation-site.md) | Delivered locally 2026-10-04 | Astro check, static build, internal link checks, browser verification |
 
 | OUT-003 | [Standalone repo and GitHub Pages](OUT-003-github-pages.md) | Live 2026-10-04 | Self-contained sources, base-path link checks, Pages workflow |
+| OUT-004 | [Implementation plan and AI-friendly design](OUT-004-implementation-design.md) | Planning delivered 2026-10-04 | Confirmed topology, proposed stack/protocol/repo decisions, milestone gates, research |
 
 OUT-001 is a documentation deliverable. No product code, deployed site, prototype,
 or completed research is implied. OUT-002 delivers the local documentation site.

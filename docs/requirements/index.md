@@ -2,7 +2,8 @@
 
 Recorded 2026-10-04. All requirements below are **captured, implementation not
 verified**. Sources are the [Draft PRD](../prd/personal-system-graph.md) and
-[accepted ADR-001](../adr/001-user-curated-graph.md). Acceptance checks are derived
+[accepted ADR-001](../adr/001-user-curated-graph.md). Later deployment requirements cite [ADR-004](../adr/004-home-server-and-clients.md),
+which records the owner's direction. Acceptance checks are derived
 workspace checks, not additional accepted architecture decisions.
 
 | ID | Requirement | Source | Derived acceptance check |
@@ -24,6 +25,8 @@ workspace checks, not additional accepted architecture decisions.
 | REQ-015 | Keep user facets and provider-owned facts distinct; AI suggestions require acceptance as user decisions. | PRD §7; ADR decision §§5, 8, 13 | A provider update changes observed visibility without overwriting user maturity/criticality; a suggestion does not become authoritative automatically. |
 | REQ-016 | Highlight potentially stale checkouts or local-only work without automatically deleting or moving them. | PRD §6 | Known evidence of stale/local-only work is surfaced; viewing or scanning leaves the working copy in place. Detection criteria remain open. |
 | REQ-017 | Keep AI advisory and prohibit automatic infrastructure mutation in V0. | PRD §§3, 9, 11; ADR decision §13 | Suggestions cannot directly alter authoritative graph intent or execute infrastructure changes. Future AI/query features are not required in V0. |
+| REQ-018 | Provide a read-only mobile PWA hosted by the home server, with API-enforced viewer permissions. | Owner clarification 2026-10-04; ADR-004 | Mobile browses/searches/inspects the graph; viewer credentials cannot mutate architecture or submit scanner batches; no offline edit queue exists. |
+| REQ-019 | Keep authoritative graph/SQLite on the home server; connect GPUI editing and machine-local scanners through APIs; mobile access uses Tailscale. | Owner direction 2026-10-04; ADR-004 | Desktop edits persist on the server; scanner reports are accepted for the enrolled machine; a mobile device reads through the private HTTPS endpoint. |
 
 ## End-to-end acceptance scenario
 

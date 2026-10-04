@@ -10,3 +10,13 @@ and anchor checks). Verify navigation and search at the configured site base.
 
 The owner authorized public GitHub Pages publishing on 2026-10-04.
 Pushes to `main` deploy through `.github/workflows/pages.yml`.
+
+## Read before scope/design changes
+
+Start with `docs/planning/index.md`, `docs/scope.md`, and the relevant ADRs.
+`docs/design/technical-design.md` covers runtime ownership and protocols;
+`docs/design/ai-friendly-repository.md` describes the proposed product layout.
+Status is meaningful: owner-confirmed topology is accepted; proposed frameworks
+and future product command wrappers must not be presented as implemented.
+Preserve the imported PRD/ADR-001 snapshots. Later scope decisions live in linked
+ADRs and requirement supplements. No product implementation exists in this repo.

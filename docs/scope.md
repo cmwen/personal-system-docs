@@ -10,6 +10,15 @@ to understand logical systems, source repositories, working copies, machines,
 and running instances. The graph is the primary interface; search helps navigate
 it. The user owns intended architecture, while discovery supplies evidence.
 
+## Confirmed deployment direction
+
+[ADR-004](adr/004-home-server-and-clients.md) records the owner's later direction:
+a home-network server owns graph data and SQLite; GPUI desktop edits; Rust
+scanners report machine-local observations; a server-hosted mobile PWA is
+read-only and accessed through Tailscale. Clients need the server for fresh data
+and authoritative edits. TypeScript server and web framework choices are
+proposals in [ADR-005](adr/005-mixed-stack-and-contracts.md).
+
 ## V0 includes
 
 - Five entity kinds: System, Repository, Checkout, Machine, Runtime.
@@ -51,7 +60,7 @@ filesystem steps. The source sets no numeric performance threshold.
 1. Establish the documentation site from this Markdown foundation, with PRDs,
    ADRs, requirements, research, and output records. Implemented locally using
    Astro/Starlight; see [ADR-002](adr/002-astro-documentation-site.md).
-2. Resolve the next implementation decisions through focused research: client
+2. Follow [the implementation plan](planning/index.md) and resolve remaining choices through focused research: client
    architecture, repository identity, scanner trust/protocol, provider interface,
    and graph interaction/layout.
 3. Implement a local persisted graph with manual editing and preserved layout.
@@ -62,7 +71,7 @@ This ordering is a proposal, not an expansion of V0 or a commitment to a stack.
 
 ## Still open
 
-native/GPUI and optional PWA approach;
+Desktop platform target and GPUI graph implementation; server/PWA framework acceptance;
 remote scanner protocol and trust boundary; identity normalization rules;
 provider adapter contract; graph rendering and semantic zoom engine; detailed
 schema; freshness thresholds; navigation integration contracts. A future

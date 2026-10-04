@@ -13,3 +13,8 @@ Both copies are verbatim snapshots of the supplied records. Scope summaries,
 requirement IDs, acceptance checks, delivery ordering, research questions, and
 the documentation site brief are workspace-derived material. They preserve the
 source boundary but are not additional accepted decisions.
+
+Subsequent owner direction on home hosting, GPUI, read-only PWA/Tailscale, and
+Rust scanners is recorded in ADR-004. TypeScript stack and repository structure
+recommendations remain Proposed in ADR-005/006. The original source snapshots
+are unchanged.

@@ -67,7 +67,7 @@ import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 ## The working record
 
 <CardGrid>
-  <LinkCard title="Product requirements" description="The draft PRD and 17 traceable requirements define V0 and its validation." href="${base}/prd/personal-system-graph/" />
+  <LinkCard title="Product requirements" description="The draft PRD and 19 traceable requirements define V0 and its validation." href="${base}/prd/personal-system-graph/" />
   <LinkCard title="Architecture decisions" description="ADR-001: user intent is authoritative; discovery supplies evidence." href="${base}/adr/001-user-curated-graph/" />
   <LinkCard title="Research" description="Open questions, evidence, options, and recommendations before decisions." href="${base}/research/" />
   <LinkCard title="Outputs" description="Delivered artifacts, validation evidence, and remaining work." href="${base}/outputs/" />
@@ -83,6 +83,6 @@ One owner. Five entity kinds. A graph you curate, with GitHub, filesystem, and L
 
 The PRD is **Draft**. ADR-001 is **Accepted for V0**. Product requirements are captured; product implementation is not verified. This documentation site is the first delivery milestone.
 
-[Documentation site](${base}/documentation-site/) · [Source provenance](${base}/sources/) · [Requirements register](${base}/requirements/)
+[Implementation plan](${base}/planning/) · [Technical design](${base}/design/technical-design/) · [Documentation site](${base}/documentation-site/) · [Source provenance](${base}/sources/) · [Requirements register](${base}/requirements/)
 `);
 console.log(`Prepared ${files.length} documentation pages from ${source}`);

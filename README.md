@@ -48,3 +48,7 @@ https://cmwen.dev/personal-system-docs/.
 
 [Scope](docs/scope.md) · [Decisions](docs/adr/002-astro-documentation-site.md) ·
 [Requirements](docs/requirements/index.md) · [Outputs](docs/outputs/index.md)
+
+[Implementation plan](docs/planning/index.md) ·
+[Technical design](docs/design/technical-design.md) ·
+[AI-friendly repository](docs/design/ai-friendly-repository.md)
